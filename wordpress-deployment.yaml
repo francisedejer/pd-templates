@@ -6,7 +6,7 @@ metadata:
     app: wordpress
 spec:
   ports:
-    - port: 80
+    - port: 443
   selector:
     app: wordpress
     tier: frontend
@@ -39,7 +39,7 @@ spec:
               name: mysql-pass
               key: password.txt
         ports:
-        - containerPort: 80
+        - containerPort: 443
           name: wordpress
         volumeMounts:
         - name: wp-html-data
